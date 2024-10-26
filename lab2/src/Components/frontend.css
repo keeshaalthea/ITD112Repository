@@ -1,0 +1,695 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #1247c1;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-size: 28px;
+}
+
+/* Form and button styles */
+.form-container {
+  max-width: 600px; /* Adjusted width for wider form */
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  padding-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff; /* Light blue background */
+}
+
+.form-title {
+  text-align: center;
+  color: #1e90ff; /* Darker blue color for the title */
+  margin-bottom: 20px;
+}
+
+.nat-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px; /* Increased space between fields */
+  margin-bottom: 15px; /* Space at the bottom of the grid */
+  margin-right: 20px;
+}
+
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 10px; /* Added space between each input */
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+
+.submit-button {
+  margin: 20px 0 0; /* Top margin increased for spacing above the button */
+  padding: 12px;
+  background-color: #1e90ff; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+.submit-button:hover {
+  background-color: #0039bf;
+}
+
+.cancel-button {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+  background-color: #ff4500;
+}
+
+/* Table styles */
+.table-scrollable {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.table-scrollable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container {
+  max-width: 1000px; /* Wider table */
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px;
+  border: 2px solid #999999;
+  min-width: 100px; /* Adjusted for wider columns */
+}
+
+th {
+  background-color: #1e90ff;
+  color: white;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Button group for edit and delete */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Button colors for edit and delete */
+.edit-button {
+  background-color: #1E90FF;
+  color: white;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.edit-button:hover {
+  background-color: #0039bf;
+}
+
+.delete-button {
+  background-color: #ff154f;
+  color: white;
+  font-size: 15px;
+}
+
+.delete-button:hover {
+  background-color: #CC0033;
+}
+
+
+.csv-uploader-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  gap: 20px;
+  max-width: 500px;
+  margin: 90px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.csv-controls {
+  display: flex;
+  flex-direction: row; /* Items in csv-controls will be in a row */
+  gap: 10px;
+}
+
+.file-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.file-input:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+.upload-button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #0039bf;
+}
+
+/* Optional global styles to ensure everything is centered */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #c3e3ff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.page-button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 16px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-button:hover {
+  background-color: #0070e1;
+}
+
+.page-button.active {
+  background-color: #003469;
+}
+
+.page-button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.page-button {
+  font-size: 18px;
+}
+
+/* Styling for the search bar and filter */
+
+
+.search-bar {
+  width: 45%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #7a7a7a;
+  font-size: 16px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-top: 28px;
+  height: 19px;
+}
+
+.region-filter {
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 245px;
+  text-align: center;
+}
+
+
+.chart-container {
+  max-width: 1000px; /* Wider table */
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  border-color: #7a7a7a;
+}
+
+/* charts table */
+
+.section-title {
+  text-align: center;
+  color: #2b6cb0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.filter-label {
+  display: block;
+  margin: 10px 0;
+  color: #2c5282;
+  font-weight: 500;
+}
+
+
+.chart-region-filter{
+  padding: 8px;
+  margin: 10px auto; /* Use auto to center */
+  border-radius: 5px;
+  border: 1px solid #a0aec0;
+  background-color: #edf2f7;
+  color: #2c5282;
+  width: 300px; /* Set a width to ensure centering */
+  text-align: center;
+}
+
+.chart-filter,
+.chart-type-filter {
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #a0aec0;
+  background-color: #edf2f7;
+  color: #2c5282;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 231px;
+  background-color: #1a83eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #ffffff;
+  margin-right: 30px;
+  margin-left: 30px;
+  height: 95px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.card:hover {
+  background-color: #0039bf;
+}
+
+.card h3 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+.recharts-bar-rectangle1 {
+  stroke-width: 1.5px;
+}
+
+
+
+.search-filter-container {
+  display: flex;
+  justify-content: start; /* Aligns the search bar and filter button */
+  align-items: center;
+  position: relative;
+}
+
+.dropdown {
+  margin-left: 10px; /* Keep the filter options button 15px to the right of the search bar */
+  position: relative;
+}
+
+.dropdown-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-category {
+  padding: 10px;
+  position: relative;
+}
+
+.dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-category:hover .dropdown-submenu {
+  display: block;
+}
+
+.dropdown-category span {
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-submenu button {
+  background-color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.dropdown-submenu button:hover {
+  background-color: #f1f1f1;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3px;
+}
+
+.filter-tag {
+  background-color: gray;
+  color: white;
+  padding: 3px 8px;
+  margin-right: 3px;
+  margin-top: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.remove-filter-button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+/* Add these to your frontend.css */
+
+.blur-background {
+  filter: blur(5px);
+}
+
+/* Ensure the form itself is NOT blurred */
+.edit-form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 400px;
+  height: 500px; /* Reduced height */
+  overflow-y: auto; /* Scrollable */
+  border-radius: 10px;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #00b15f;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: large;
+}
+
+.table-container {
+  position: relative;
+  z-index: 1; /* Ensures the table stays behind the popup */
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Blur container for background content */
+.blur-container {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* Dim the background when the form is open */
+.dim-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.cancel-button2 {
+  margin: 20px 0 0; /* Top margin increased for spacing above the button */
+  padding: 15px;
+  background-color: #ff154f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-right: 10px;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-bottom: 20px;
+}
+
+.cancel-button2:hover {
+  background-color: #CC0033; /* Darker tomato color on hover */
+}
+
+
+
+/* Sidebar.css */
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #e2edfd; /* Light modern background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  z-index: 100;
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Hamburger Toggle */
+.hamburger {
+  font-size: 24px;
+  color: #1247C1; /* Darker blue for hamburger */
+  cursor: pointer;
+}
+
+/* Sidebar List */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0; /* Margin to adjust the list under the hamburger */
+}
+
+.sidebar-item {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #4A4A4A; /* Neutral grey text */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between; /* To place the dropdown icon */
+  align-items: center;
+}
+
+.sidebar-item:hover {
+  background-color: #f7fbff; /* Hover effect with a lighter background */
+}
+
+/* Menu Item Text */
+.menu-item-text {
+  margin-left: 10px;
+  font-weight: 500; /* Modern typography */
+}
+
+.hidden-text {
+  display: none;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+  font-size: 12px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Submenu */
+.submenu {
+  padding-left: 20px;
+  list-style: none;
+  margin-top: 5px;
+}
+
+li:hover .submenu {
+  display: block;
+}
+
+/* Minimalistic Transition */
+.sidebar.collapsed .dropdown-icon {
+  display: none;
+}
+
+.sidebar.collapsed .submenu {
+  display: none;
+}
+
+.sidebar-item a {
+  text-decoration: none;
+  color: #1247C1; /* Use Apple-like blue for links */
+}
+
+/* Sidebar Item Hover Effect */
+.sidebar-item:hover a {
+  color: #007AFF; /* Lighter blue on hover like iOS */
+}
+
